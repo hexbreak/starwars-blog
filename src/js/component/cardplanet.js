@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 export const CardPlanet = props => {
 	return (
-		<div className="card bg-secondary" style={{ width: "18rem" }}>
+		<div className="card bg-secondary mb-2" style={{ width: "18rem" }}>
 			<img className="card-img-top" src="..." alt="Card image cap" />
 			<div className="card-body">
 				<h5 className="card-title">{props.planet.name}</h5>
