@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { CardCharacter } from "../component/cardcharacter.js";
 import { CardPlanet } from "../component/cardplanet.js";
 import { CardStarship } from "../component/cardstarship.js";
+import { LukeIMG } from "../../img/luke_img.jpeg";
 
 export function Home() {
 	const [theCharacters, setCharacters] = useState([
@@ -27,7 +27,6 @@ export function Home() {
 		{ name: "DS-1 Orbital Battle Station" },
 		{ name: "YT-1300 light freighter" }
 	]);
-
 	return (
 		<div className="container- d-flex justify-content-center mt-5">
 			<div className="p-1">
