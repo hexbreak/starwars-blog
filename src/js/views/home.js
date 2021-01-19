@@ -30,19 +30,19 @@ export function Home() {
 	return (
 		<div className="container- d-flex justify-content-center mt-5">
 			<div className="p-1">
-				<h1>Characters</h1>
+				<h1 className="text-center">Characters</h1>
 				{theCharacters.map((value, index) => {
 					return <CardCharacter key={index} character={value} />;
 				})}
 			</div>
 			<div className="p-1">
-				<h1>Planets</h1>
+				<h1 className="text-center">Planets</h1>
 				{thePlanets.map((value, index) => {
 					return <CardPlanet key={index} planet={value} />;
 				})}
 			</div>
 			<div className="p-1">
-				<h1>Starships</h1>
+				<h1 className="text-center">Starships</h1>
 				{theStarships.map((value, index) => {
 					return <CardStarship key={index} starship={value} />;
 				})}

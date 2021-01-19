@@ -10,9 +10,9 @@ export const CardPlanet = props => {
 		<div className="card bg-secondary mb-2" style={{ width: "20rem" }}>
 			<img className="card-img-top" src={lukeImage} alt="Card image cap" />
 			<div className="card-body">
-				<h5 className="card-title">{props.planet.name}</h5>
+				<h5 className="card-title text-center">{props.planet.name}</h5>
 				<p className="card-text" />
-				<a href="#" className="btn bg-danger">
+				<a href="#" className="btn btn-sm bg-danger">
 					databank
 				</a>
 			</div>
