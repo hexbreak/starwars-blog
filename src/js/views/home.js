@@ -12,24 +12,30 @@ export function Home() {
 	const [theStarships, setStarships] = useState([{ name: "Starship 1" }, { name: "Starship 2" }]);
 
 	return (
-		<div className="container- d-flex justify-content-center mt-5 row">
-			<div>
+		<div className="container- d-flex justify-content-center mt-5">
+			<div className="p-1 row">
 				<h1>Characters</h1>
-				{theCharacters.map((value, index) => {
-					return <CardCharacter key={index} character={value} />;
-				})}
+				<div className="p-1 row">
+					{theCharacters.map((value, index) => {
+						return <CardCharacter key={index} character={value} />;
+					})}
+				</div>
 			</div>
-			<div>
+			<div className="p-1 row">
 				<h1>Planets</h1>
-				{thePlanets.map((value, index) => {
-					return <CardPlanet key={index} planet={value} />;
-				})}
+				<div className="p-1 row">
+					{thePlanets.map((value, index) => {
+						return <CardPlanet key={index} planet={value} />;
+					})}
+				</div>
 			</div>
-			<div>
+			<div className="p-1 row">
 				<h1>Starships</h1>
-				{theStarships.map((value, index) => {
-					return <CardStarship key={index} starship={value} />;
-				})}
+				<div className="p-1 row">
+					{theStarships.map((value, index) => {
+						return <CardStarship key={index} starship={value} />;
+					})}
+				</div>
 			</div>
 		</div>
 	);
