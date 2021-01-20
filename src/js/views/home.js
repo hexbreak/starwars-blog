@@ -28,7 +28,8 @@ export function Home() {
 		{ name: "YT-1300 light freighter" }
 	]);
 	return (
-		<div className="container">
+		<div className="container align-items-center">
+			<h1 className="h1 text-center">Test!</h1>
 			<div className="row">
 				{theCharacters.map((value, index) => {
 					return <CardCharacter key={index} character={value} />;
