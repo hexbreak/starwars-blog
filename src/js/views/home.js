@@ -28,21 +28,21 @@ export function Home() {
 		{ name: "YT-1300 light freighter" }
 	]);
 	return (
-		<div className="container- d-flex justify-content-center mt-5">
-			<div className="p-1">
-				<h1 className="text-center">Characters</h1>
+		<div className="container">
+			<h1 className="text-center">Characters</h1>
+			<div className="row">
 				{theCharacters.map((value, index) => {
 					return <CardCharacter key={index} character={value} />;
 				})}
 			</div>
-			<div className="p-1">
-				<h1 className="text-center">Planets</h1>
+			<h1 className="text-center">Planets</h1>
+			<div className="row">
 				{thePlanets.map((value, index) => {
 					return <CardPlanet key={index} planet={value} />;
 				})}
 			</div>
-			<div className="p-1">
-				<h1 className="text-center">Starships</h1>
+			<h1 className="text-center">Starships</h1>
+			<div className="row">
 				{theStarships.map((value, index) => {
 					return <CardStarship key={index} starship={value} />;
 				})}

@@ -7,7 +7,7 @@ import lukeImage from "../../img/luke_img.jpeg";
 
 export const CardStarship = props => {
 	return (
-		<div className="card bg-secondary mb-2" style={{ width: "20rem" }}>
+		<div className="card bg-secondary mb-1 mr-1 shadow-lg" style={{ width: "14rem" }}>
 			<img className="card-img-top" src={lukeImage} alt="Card image cap" />
 			<div className="card-body">
 				<h5 className="card-title text-center">{props.starship.name}</h5>
