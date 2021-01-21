@@ -13,7 +13,7 @@ export const CardCharacter = props => {
 			<div className="card-body">
 				<h5 className="card-title text-center">{props.character.name}</h5>
 				<p className="card-text">Height: {props.character.height}</p>
-				<Link to={"/detailsCharacter/" + props.character.id} className="btn btn-sm bg-danger">
+				<Link to={"/detailscharacter/" + props.character.id} className="btn btn-sm bg-danger">
 					databank
 				</Link>
 			</div>

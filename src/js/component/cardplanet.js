@@ -13,9 +13,9 @@ export const CardPlanet = props => {
 			<div className="card-body">
 				<h5 className="card-title text-center">{props.planet.name}</h5>
 				<p className="card-text">Terrain: {props.planet.terrain}</p>
-				<a href="#" className="btn btn-sm bg-danger">
+				<Link to={"/detailsplanet/" + props.planet.id} className="btn btn-sm bg-danger">
 					databank
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

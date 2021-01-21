@@ -13,9 +13,9 @@ export const CardStarship = props => {
 			<div className="card-body">
 				<h5 className="card-title text-center">{props.starship.name}</h5>
 				<p className="card-text">Manufacturer: {props.starship.manufacturer}</p>
-				<a href="#" className="btn btn-sm bg-danger">
+				<Link to={"/detailsstarship/" + props.starship.id} className="btn btn-sm bg-danger">
 					databank
-				</a>
+				</Link>
 			</div>
 		</div>
 	);
