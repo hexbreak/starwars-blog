@@ -6,27 +6,9 @@ import { CardStarship } from "../component/cardstarship.js";
 import { LukeIMG } from "../../img/luke_img.jpeg";
 
 export function Home() {
-	const [theCharacters, setCharacters] = useState([
-		{ name: "Luke Skywalker" },
-		{ name: "C-3PO" },
-		{ name: "R2-D2" },
-		{ name: "Darth Vader" },
-		{ name: "Leia Organa" }
-	]);
-	const [thePlanets, setPlanets] = useState([
-		{ name: "Tatooine" },
-		{ name: "Alderaan" },
-		{ name: "Yavin IV" },
-		{ name: "Hoth" },
-		{ name: "Dagobah" }
-	]);
-	const [theStarships, setStarships] = useState([
-		{ name: "CR90 corvette" },
-		{ name: "Imperial I-class Star Destroyer" },
-		{ name: "Sentinel-class landing craft" },
-		{ name: "DS-1 Orbital Battle Station" },
-		{ name: "YT-1300 light freighter" }
-	]);
+	const [theCharacters, setCharacters] = useState([]);
+	const [thePlanets, setPlanets] = useState([]);
+	const [theStarships, setStarships] = useState([]);
 
 	useEffect(() => {
 		fetch("https://swapi.dev/api/people/")
@@ -53,19 +35,57 @@ export function Home() {
 
 	// we will now copy the entire useEffect for the thePlanets & theStarships.
 
+	useEffect(() => {
+		fetch("https://swapi.dev/api/planets/")
+			.then(function(response) {
+				if (!response.ok) {
+					throw Error(response.statusText);
+				}
+				// Read the response as json.
+				return response.json();
+			})
+			.then(function(responseAsJson) {
+				// Do stuff with the JSON
+				setPlanets(responseAsJson.results);
+			})
+			.catch(function(error) {
+				console.log("Looks like there was a problem: \n", error);
+			});
+	}, []);
+
+	useEffect(() => {
+		fetch("https://swapi.dev/api/starships/")
+			.then(function(response) {
+				if (!response.ok) {
+					throw Error(response.statusText);
+				}
+				// Read the response as json.
+				return response.json();
+			})
+			.then(function(responseAsJson) {
+				// Do stuff with the JSON
+				setStarships(responseAsJson.results);
+			})
+			.catch(function(error) {
+				console.log("Looks like there was a problem: \n", error);
+			});
+	}, []);
+
 	return (
 		<div className="container align-items-center">
-			<h1 className="h1 text-center">Test!</h1>
+			<h2 className="h2">characters</h2>
 			<div className="row">
 				{theCharacters.map((value, index) => {
 					return <CardCharacter key={index} character={value} />;
 				})}
 			</div>
+			<h2 className="h2">planets</h2>
 			<div className="row">
 				{thePlanets.map((value, index) => {
 					return <CardPlanet key={index} planet={value} />;
 				})}
 			</div>
+			<h2 className="h2">starships</h2>
 			<div className="row">
 				{theStarships.map((value, index) => {
 					return <CardStarship key={index} starship={value} />;
