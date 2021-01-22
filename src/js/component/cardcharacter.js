@@ -12,7 +12,10 @@ export const CardCharacter = props => {
 			<img className="card-img-top" src={lukeImage} alt="Card image cap" />
 			<div className="card-body">
 				<h5 className="card-title text-center">{props.character.name}</h5>
-				<p className="card-text">Height: {props.character.height}</p>
+				<p className="card-text">
+					<p className="text-family">Birth Year:</p>
+					{props.character.birth_year}
+				</p>
 				<Link to={"/detailscharacter/" + props.character.id} className="btn btn-sm bg-danger">
 					databank
 				</Link>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const DetailsCharacter = props => {
 	return (
-		<div className="container">
+		<div className="container text-white">
 			<div className="main-page">character test</div>
 			<div className="row">
 				<div className="col-md-2">character test 2</div>
@@ -13,4 +13,8 @@ export const DetailsCharacter = props => {
 			</div>
 		</div>
 	);
+};
+
+DetailsCharacter.propTypes = {
+	character: PropTypes.object
 };
