@@ -3,6 +3,7 @@ import "../../styles/home.scss";
 import { CardCharacter } from "../component/cardcharacter.js";
 import { CardPlanet } from "../component/cardplanet.js";
 import { CardStarship } from "../component/cardstarship.js";
+import { Navigate } from "../component/navigate.js";
 import { LukeIMG } from "../../img/luke_img.jpeg";
 
 export function Home() {
