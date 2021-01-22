@@ -32,11 +32,9 @@ export function Home() {
 			.catch(function(error) {
 				console.log("Looks like there was a problem: \n", error);
 			});
-	}, []);
 
-	// we will now copy the entire useEffect for the thePlanets & theStarships.
+		// we will now copy everything insde the useEffect for the thePlanets & theStarships.
 
-	useEffect(() => {
 		fetch("https://swapi.dev/api/planets/")
 			.then(function(response) {
 				if (!response.ok) {
@@ -52,9 +50,7 @@ export function Home() {
 			.catch(function(error) {
 				console.log("Looks like there was a problem: \n", error);
 			});
-	}, []);
 
-	useEffect(() => {
 		fetch("https://swapi.dev/api/starships/")
 			.then(function(response) {
 				if (!response.ok) {
@@ -74,7 +70,7 @@ export function Home() {
 
 	return (
 		<div className="container align-items-center">
-			<h2 className="h2">&#47;&#47; characters</h2>
+			<h3 className="h3">&#47;&#47; characters</h3>
 			<div className="row">
 				{/* We want to map theCharacters array so we use DOT map, for every element in characters
                 we want to have inside is an arrow function for the return.
@@ -88,13 +84,13 @@ export function Home() {
 					// Whenever we map we always have to remember that the first HTML tag in the return needs to        inclide a key attribute. We need a key attribute
 				})}
 			</div>
-			<h2 className="h2">&#47;&#47; planets</h2>
+			<h3 className="h3">&#47;&#47; planets</h3>
 			<div className="row">
 				{thePlanets.map((value, index) => {
 					return <CardPlanet key={index} planet={value} />;
 				})}
 			</div>
-			<h2 className="h2">&#47;&#47; starships</h2>
+			<h3 className="h3">&#47;&#47; starships</h3>
 			<div className="row">
 				{theStarships.map((value, index) => {
 					return <CardStarship key={index} starship={value} />;

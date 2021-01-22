@@ -5,11 +5,13 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { DetailsCharacter } from "./views/detailscharacter";
+import { DetailsPlanet } from "./views/detailsplanet";
+import { DetailsStarship } from "./views/detailsstarship";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { Navigate } from "./component/navigate.js";
 
 //create your first component
 const Layout = () => {
@@ -24,16 +26,7 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
-							<div className="container text-center">
-								<div className="row">
-									<div className="col-sm-2">
-										<Navigate />
-									</div>
-									<div className="col-lg-10">
-										<Home />
-									</div>
-								</div>
-							</div>
+							<Home />
 						</Route>
 						<Route exact path="/demo">
 							<Demo />
@@ -41,15 +34,9 @@ const Layout = () => {
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
-						<Route exact path="/detailscharacter/:theid">
-							<detailsCharacter />
-						</Route>
-						<Route exact path="/detailsplanet/:theid">
-							<detailsPlanet />
-						</Route>
-						<Route exact path="/detailsstarship/:theid">
-							<detailsStarship />
-						</Route>
+						<Route exact path="/detailscharacter/:theid" component={DetailsCharacter} />
+						<Route exact path="/detailsplanet/:theid" component={DetailsPlanet} />
+						<Route exact path="/detailsstarship/:theid" component={DetailsStarship} />
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
