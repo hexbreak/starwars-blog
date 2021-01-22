@@ -26,10 +26,10 @@ const Layout = () => {
 						<Route exact path="/">
 							<div className="container text-center">
 								<div className="row">
-									<div className="col-sm-2">
+									<div className="d-inline p-2">
 										<Navigate />
 									</div>
-									<div className="col-lg-10">
+									<div className="d-inline p-2">
 										<Home />
 									</div>
 								</div>
