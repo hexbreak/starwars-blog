@@ -24,12 +24,12 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
-							<div className="container">
+							<div className="container text-center">
 								<div className="row">
-									<div className="col-2">
+									<div className="col-sm-2">
 										<Navigate />
 									</div>
-									<div className="col-10">
+									<div className="col-lg-10">
 										<Home />
 									</div>
 								</div>
