@@ -8,7 +8,7 @@ import lukeImage from "../../img/luke_img.jpeg";
 
 export const CardPlanet = props => {
 	return (
-		<div className="card bg-secondary mb-1 mr-1 shadow-lg" style={{ width: "14rem" }}>
+		<div className="card bg-dark text-white mb-1 mr-1 shadow-lg" style={{ width: "14rem" }}>
 			<img className="card-img-top" src={lukeImage} alt="Card image cap" />
 			<div className="card-body">
 				<h5 className="card-title text-center">{props.planet.name}</h5>

@@ -1,16 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&display=swap');
 
 body {
-    background: rgb(161, 161, 161);
+    background: rgb(26, 25, 25);
 }
 
-h3 {
+.h3 {
     font-family: 'Stardos Stencil', cursive;;
     color: white;
-    font-size: 1px;
-}
-
-.rowC {
-    display:flex;
-    flex-direction:row;
+    font-size: 22px;
 }
