@@ -73,19 +73,27 @@ export function Home() {
 
 	return (
 		<div className="container align-items-center">
-			<h2 className="h2">characters</h2>
+			<h2 className="h2">&#47;&#47; characters</h2>
 			<div className="row">
+				{/* We want to map theCharacters array so we use DOT map, for every element in characters
+                we want to have inside is an arrow function for the return.
+                    the parameters for the mapping function is the same (value, index). In this case we use,
+                    characters for each value and the index for each index in the array.
+                 */}
 				{theCharacters.map((value, index) => {
 					return <CardCharacter key={index} character={value} />;
+					// our CardCharacter needs to show the details, so we need to pass props with the details.
+					// We create a prop called character and the value comes from the parameter above in line with      map
+					// Whenever we map we always have to remember that the first HTML tag in the return needs to        inclide a key attribute. We need a key attribute
 				})}
 			</div>
-			<h2 className="h2">planets</h2>
+			<h2 className="h2">&#47;&#47; planets</h2>
 			<div className="row">
 				{thePlanets.map((value, index) => {
 					return <CardPlanet key={index} planet={value} />;
 				})}
 			</div>
-			<h2 className="h2">starships</h2>
+			<h2 className="h2">&#47;&#47; starships</h2>
 			<div className="row">
 				{theStarships.map((value, index) => {
 					return <CardStarship key={index} starship={value} />;
