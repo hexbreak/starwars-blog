@@ -4,7 +4,6 @@ import { CardCharacter } from "../component/cardcharacter.js";
 import { CardPlanet } from "../component/cardplanet.js";
 import { CardStarship } from "../component/cardstarship.js";
 import { Navigate } from "../component/navigate.js";
-import { LukeIMG } from "../../img/luke_img.jpeg";
 
 export function Home() {
 	const [theCharacters, setCharacters] = useState([]);
@@ -80,8 +79,8 @@ export function Home() {
 				{theCharacters.map((value, index) => {
 					return <CardCharacter key={index} character={value} />;
 					// our CardCharacter needs to show the details, so we need to pass props with the details.
-					// We create a prop called character and the value comes from the parameter above in line with      map
-					// Whenever we map we always have to remember that the first HTML tag in the return needs to        inclide a key attribute. We need a key attribute
+					// We create a prop called character and the value comes from the parameter above in line with map
+					// Whenever we map we always have to remember that the first HTML tag in the return needs to include a key attribute. We need a key attribute
 				})}
 			</div>
 			<h3 className="h3">&#47;&#47; planets</h3>
