@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import lukeImage from "../../img/luke_img.jpeg";
 
 // create the cards with props
-// CTRL / for comment
+// CTRL forward slash ( / ) for comment
 
 export const CardCharacter = props => {
 	return (
