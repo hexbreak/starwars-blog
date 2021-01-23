@@ -12,10 +12,10 @@ export const CardPlanet = props => {
 			<img className="card-img-top" src={planetImage} alt="Card image cap" />
 			<div className="card-body">
 				<h5 className="card-title text-center">{props.planet.name}</h5>
-				<p className="card-text">
-					<p className="text-family">Terrain: </p>
+				<div className="card-text">
+					<div className="text-family">Terrain: </div>
 					{props.planet.terrain}
-				</p>
+				</div>
 				<Link to={"/detailsplanet/" + props.planet.id} className="btn btn-sm bg-danger">
 					databank
 				</Link>

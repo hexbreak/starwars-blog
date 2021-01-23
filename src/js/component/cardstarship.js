@@ -12,10 +12,10 @@ export const CardStarship = props => {
 			<img className="card-img-top" src={starshipImage} alt="Card image cap" />
 			<div className="card-body">
 				<h5 className="card-title text-center">{props.starship.name}</h5>
-				<p className="card-text">
-					<p className="text-family">Manufacturer: </p>
+				<div className="card-text">
+					<div className="text-family">Manufacturer: </div>
 					{props.starship.manufacturer}
-				</p>
+				</div>
 				<Link to={"/detailsstarship/" + props.starship.id} className="btn btn-sm bg-danger">
 					databank
 				</Link>
