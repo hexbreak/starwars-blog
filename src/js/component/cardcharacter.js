@@ -21,8 +21,12 @@ export const CardCharacter = props => {
 				<Link to={"/detailscharacter/" + props.character.id} className="btn btn-sm bg-danger">
 					databank
 				</Link>
-				<button className="btn btn-sm bg-info" onClick={() => actions.addFavorite(props.character.name)}>
+				{/* We will use an onclick event with conditional rendering. */}
+				<button className="btn btn-sm bg-info" onClick={e => actions.addFavorite(props.character.name)}>
 					Add favorite
+				</button>
+				<button className="btn btn-sm bg-info" onClick={e => actions.deleteFavorite(props.character.name)}>
+					Delete
 				</button>
 			</div>
 		</div>
