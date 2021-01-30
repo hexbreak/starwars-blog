@@ -13,7 +13,7 @@ export const DetailsCharacter = props => {
 					<div className="col-md-4">
 						<img src={lukeImage} alt="Character Image" />
 					</div>
-					<div className="col-md-8">
+					<div className="col-md-8 pr-5">
 						<div className="card-body">
 							<div className="card-title">Name: Character Name Belongs Here</div>
 							<div className="card-text">Birth Date goes here!</div>
