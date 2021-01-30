@@ -15,11 +15,10 @@ export const DetailsCharacter = props => {
 					</div>
 					<div className="col-md-8">
 						<div className="card-body">
-							<div className="card-title">Name: {props.location.character.name}</div>
-							<div className="card-text">
-								This is a wider card with supporting text below as a natural lead-in to additional
-								content. This content is a little bit longer.
-							</div>
+							<div className="card-title">Name: Character Name Belongs Here</div>
+							<div className="card-text">Birth Date goes here!</div>
+							<div className="card-text">Class goes here!</div>
+							<div className="card-text">More miscellaneous goes here!</div>
 							<div className="card-text">
 								<div className="text-muted">Go Back Button will go here!</div>
 							</div>
