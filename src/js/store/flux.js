@@ -50,9 +50,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 				setStore({ favorites: newFavorites });
 			},
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
 			loadSomeData: () => {
 				fetch("https://swapi.dev/api/people/")
 					.then(function(response) {
