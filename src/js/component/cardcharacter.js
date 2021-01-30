@@ -18,9 +18,15 @@ export const CardCharacter = props => {
 					<div className="text-family">Birth Year:</div>
 					{props.character.birth_year}
 				</div>
-				<Link to={"/detailscharacter/" + props.character.id} className="btn btn-sm bg-danger">
+				<Link
+					to={{
+						pathname: `/detailscharacter/${props.character.name}`,
+						state: { index: props.character }
+					}}
+					className="btn btn-sm bg-danger">
 					databank
 				</Link>
+
 				{/* We will use an onclick event with conditional rendering. */}
 				<button className="btn btn-sm bg-info" onClick={e => actions.addFavorite(props.character.name)}>
 					Add favorite
@@ -34,7 +40,8 @@ export const CardCharacter = props => {
 };
 
 CardCharacter.propTypes = {
-	character: PropTypes.object
+	character: PropTypes.object,
+	index: PropTypes.number
 };
 
 // make separate files for each card/component for easy tracking of coding
