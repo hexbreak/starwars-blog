@@ -26,12 +26,12 @@ export const CardCharacter = props => {
 					databank
 				</Link>
 
-				{/* We will use an onclick event with conditional rendering. */}
-				<button className="btn btn-sm bg-info" onClick={e => actions.addFavorite(props.character.name)}>
-					Add favorite
+				{/* We will use an onclick event with conditional rendering. button <btn-sm bg-info> */}
+				<button className="btn" onClick={e => actions.deleteFavorite(props.character.name)}>
+					<i className="fab fa-galactic-republic fa-1x text-light" />
 				</button>
-				<button className="btn btn-sm bg-info" onClick={e => actions.deleteFavorite(props.character.name)}>
-					Delete
+				<button className="btn" onClick={e => actions.addFavorite(props.character.name)}>
+					<i className="fab fa-galactic-senate fa-2x text-white text-right" />
 				</button>
 			</div>
 		</div>

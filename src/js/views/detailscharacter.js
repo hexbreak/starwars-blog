@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
-import lukeImage from "../../img/luke_img.jpeg";
 import { Context } from "../store/appContext";
+import lukeImage from "../../img/luke_img.jpeg";
 
-export const DetailsCharacter = props => {
+export const DetailsCharacter = () => {
 	const { store, actions } = useContext(Context);
 	let { theid } = useParams();
 	const singleCharacter = store.theCharacters.find(element => element.name === theid);
-	const { name, birth_year, height, gender, mass } = singleCharacter;
+	const { name, birth_year, height, eye_color, mass } = singleCharacter;
 	console.log(singleCharacter);
 
 	return (
@@ -20,13 +19,15 @@ export const DetailsCharacter = props => {
 					</div>
 					<div className="col-3">
 						<div className="card-body">
-							<div className="card-title">Name: {name}</div>
+							<div className="h3 card-title text-center">{name}</div>
 							<div className="card-text">Birth Year: {birth_year}</div>
-							<div className="card-text">Gender: {gender}</div>
+							<div className="card-text">Eye Color: {eye_color}</div>
 							<div className="card-text">Height: {height}</div>
 							<div className="card-text">Mass: {mass}</div>
-							<div className="card-text">
-								<div className="text-muted">Go Back Button will go here!</div>
+							<div className="card-text align-bottom">
+								<Link to="/">
+									<div className="text-muted">Go Back Button will go here!</div>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -34,8 +35,4 @@ export const DetailsCharacter = props => {
 			</div>
 		</div>
 	);
-};
-
-DetailsCharacter.propTypes = {
-	test: PropTypes.string
 };
