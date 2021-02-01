@@ -8,14 +8,14 @@ export const DetailsCharacter = props => {
 	const { store, actions } = useContext(Context);
 	return (
 		<div className="container-fluid d-flex justify-content-center">
-			<div className="card mb-3 bg-dark" style={{ maxWidth: "1000px" }}>
+			<div className="card mb-3 bg-dark" style={{ maxWidth: "2000px" }}>
 				<div className="row g-0 text-white">
-					<div className="col-md-4">
+					<div className="col-8">
 						<img src={lukeImage} alt="Character Image" />
 					</div>
-					<div className="col-md-8 pr-5">
+					<div className="col-4">
 						<div className="card-body">
-							<div className="card-title">Name: Character Name Belongs Here</div>
+							<div className="card-title ">Name: Character Name Belongs Here</div>
 							<div className="card-text">Birth Date goes here!</div>
 							<div className="card-text">Class goes here!</div>
 							<div className="card-text">More miscellaneous goes here!</div>
@@ -30,6 +30,4 @@ export const DetailsCharacter = props => {
 	);
 };
 
-DetailsCharacter.propTypes = {
-	location: PropTypes.object
-};
+DetailsCharacter.propTypes = {};
