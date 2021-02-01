@@ -20,8 +20,7 @@ export const CardCharacter = props => {
 				</div>
 				<Link
 					to={{
-						pathname: `/detailscharacter/${props.character.name}`,
-						state: { index: props.character }
+						pathname: `/detailscharacter/${props.character.name}`
 					}}
 					className="btn btn-sm bg-danger">
 					databank
