@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import starshipImage from "../../img/starship_img.jpeg";
 
-// create the cards with props
-// CTRL / for comment
-
 export const CardStarship = props => {
 	const { store, actions } = useContext(Context);
 	return (
@@ -39,5 +36,3 @@ export const CardStarship = props => {
 CardStarship.propTypes = {
 	starship: PropTypes.object
 };
-
-// make separate files for each card/component for easy tracking of coding

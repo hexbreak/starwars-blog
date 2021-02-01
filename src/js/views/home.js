@@ -3,12 +3,10 @@ import "../../styles/home.scss";
 import { CardCharacter } from "../component/cardcharacter.js";
 import { CardPlanet } from "../component/cardplanet.js";
 import { CardStarship } from "../component/cardstarship.js";
-import { Navigate } from "../component/navigate.js";
 import { Context } from "../store/appContext";
 
 export function Home() {
 	const { store, actions } = useContext(Context);
-
 	return (
 		<div className="container align-items-center">
 			<h3 className="h3">&#47;&#47; characters</h3>
@@ -40,14 +38,3 @@ export function Home() {
 		</div>
 	);
 }
-
-// this this main page to map/display our bootstrap cards.
-
-// var variableName = "String Name"
-/* const  variableName {  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-    propertyName: "stringName", // zero or more characters inside quotes    \
-    propertyAge: 18,                                                         \__ Object
-    propertyMarriage: false, // boolean syntax for true or false             /
-    propertyPurchases: ["stringFood", "stringLaptop","stringSkateboard"] _ _/
-}
-*/

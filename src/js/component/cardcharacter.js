@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import lukeImage from "../../img/luke_img.jpeg";
 import { Context } from "../store/appContext";
 
-// create the cards with props
-// CTRL forward slash ( / ) for comment
-
 export const CardCharacter = props => {
 	const { store, actions } = useContext(Context);
 	return (
@@ -25,8 +22,6 @@ export const CardCharacter = props => {
 					className="btn btn-sm bg-danger">
 					databank
 				</Link>
-
-				{/* We will use an onclick event with conditional rendering. button <btn-sm bg-info> */}
 				<button className="btn" onClick={e => actions.deleteFavorite(props.character.name)}>
 					<i className="fab fa-galactic-republic fa-1x text-light" />
 				</button>
@@ -42,5 +37,3 @@ CardCharacter.propTypes = {
 	character: PropTypes.object,
 	index: PropTypes.number
 };
-
-// make separate files for each card/component for easy tracking of coding

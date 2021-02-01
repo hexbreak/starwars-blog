@@ -8,14 +8,13 @@ export const DetailsStarship = () => {
 	let { theid } = useParams();
 	const singleStarship = store.theStarships.find(element => element.name === theid);
 	const { name, manufacturer, model, cost_in_credits, hyperdrive_rating } = singleStarship;
-	console.log(singleStarship);
 
 	return (
 		<div className="container-fluid d-flex justify-content-center">
 			<div className="card mb-3 bg-dark" style={{ maxWidth: "2000px" }}>
 				<div className="row g-0 text-white">
 					<div className="col-9">
-						<img src={starshipImage} alt="Planet Image" />
+						<img src={starshipImage} alt="Starship Image" />
 					</div>
 					<div className="col-3">
 						<div className="card-body">
@@ -24,11 +23,7 @@ export const DetailsStarship = () => {
 							<div className="card-text">Model: {model}</div>
 							<div className="card-text">Cost in Credits: {cost_in_credits}</div>
 							<div className="card-text">Hyperdrive Rating: {hyperdrive_rating}</div>
-							<div className="card-text align-bottom">
-								<Link to="/">
-									<div className="text-muted">Go Back Button will go here!</div>
-								</Link>
-							</div>
+							<div className="card-text align-bottom" />
 						</div>
 					</div>
 				</div>

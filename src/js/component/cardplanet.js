@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import planetImage from "../../img/planet_img.jpeg";
 
-// create the cards with props
-// CTRL forward slash ( / ) for comment
-
 export const CardPlanet = props => {
 	const { store, actions } = useContext(Context);
 	return (
@@ -39,5 +36,3 @@ export const CardPlanet = props => {
 CardPlanet.propTypes = {
 	planet: PropTypes.object
 };
-
-// make separate files for each card/component for easy tracking of coding

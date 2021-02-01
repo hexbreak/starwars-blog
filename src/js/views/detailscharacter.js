@@ -8,7 +8,6 @@ export const DetailsCharacter = () => {
 	let { theid } = useParams();
 	const singleCharacter = store.theCharacters.find(element => element.name === theid);
 	const { name, birth_year, height, eye_color, mass } = singleCharacter;
-	console.log(singleCharacter);
 
 	return (
 		<div className="container-fluid d-flex justify-content-center">
@@ -24,11 +23,7 @@ export const DetailsCharacter = () => {
 							<div className="card-text">Eye Color: {eye_color}</div>
 							<div className="card-text">Height: {height}</div>
 							<div className="card-text">Mass: {mass}</div>
-							<div className="card-text align-bottom">
-								<Link to="/">
-									<div className="text-muted">Go Back Button will go here!</div>
-								</Link>
-							</div>
+							<div className="card-text align-bottom" />
 						</div>
 					</div>
 				</div>

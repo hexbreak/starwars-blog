@@ -18,7 +18,6 @@ export const Navbar = () => {
 						aria-haspopup="true"
 						aria-expanded="false">
 						Favorites {store.favorites.length}
-						{/* display the count of favorites the user clicked */}
 					</button>
 					<div className={store.favorites.length > 0 ? "dropdown-menu show" : "d-none"}>
 						{store.favorites.map((item, index) => {

@@ -8,7 +8,6 @@ export const DetailsPlanet = () => {
 	let { theid } = useParams();
 	const singlePlanet = store.thePlanets.find(element => element.name === theid);
 	const { name, population, terrain, orbital_period, gravity } = singlePlanet;
-	console.log(singlePlanet);
 
 	return (
 		<div className="container-fluid d-flex justify-content-center">
@@ -24,11 +23,7 @@ export const DetailsPlanet = () => {
 							<div className="card-text">Terrain: {terrain}</div>
 							<div className="card-text">Orbital Period: {orbital_period}</div>
 							<div className="card-text">Gravity: {gravity}</div>
-							<div className="card-text align-bottom">
-								<Link to="/">
-									<div className="text-muted">Go Back Button will go here!</div>
-								</Link>
-							</div>
+							<div className="card-text align-bottom" />
 						</div>
 					</div>
 				</div>
